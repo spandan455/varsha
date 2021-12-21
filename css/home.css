@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
+
+
 *{
      margin: 0;
      padding: 0;
@@ -12,7 +14,7 @@ body{
 }
 
 .nav{
-  width: calc(100% - 6rem);
+  width: 100vw;
   height: 75px;
   background-color: #efeeee;
   box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
@@ -28,7 +30,7 @@ body{
 }
 
 li{
-  list-style: none;
+     text-decoration : none;
 }
   
   li.logo{
@@ -44,7 +46,7 @@ li{
   
   .nologo{
     margin: 0 1rem;
-    padding: 0.5rem 1.5rem;
+    padding: 10% 10%;
     border: 2px solid rgba(255,255,255,.3);
     box-shadow: 4px 4px 6px 0 rgba(0,0,0,.1), -4px -4px 6px rgba(255,255,255,1);
     border-radius: 10px;
