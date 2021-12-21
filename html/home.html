@@ -1,102 +1,211 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varshaa</title>
-    <link rel="stylesheet" href="https://spandan455.github.io/varsha/css/home.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js"></script>
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
-    <ul class="nav">
-        <li class="logo">Varshaa</li>
-        <a class="a" href="https://spandan455.github.io/varsha/html/home.html"><li class="nologo neutroA" tabindex="0"><i data-feather="home"></i></li></a>
-        <a class="a" href="https://spandan455.github.io/varsha/html/contact.html"><li class="nologo " tabindex="0"><i data-feather="phone"></i></li></a>
-        <a class="a" href="https://spandan455.github.io/varsha/html/products.html"><li class="nologo " tabindex="0"><i data-feather="shopping-cart"></i></li></a>
-    </ul>
-    <section class="preview">
-        <h1>Welcome to 
-            <span
-               class="txt-rotate"
-               data-period="100"
-               data-rotate='[ " Varshaa", " Svancom", " and CleanCare" ]'></span>
-          </h1>
-          <p class="shade p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, amet. Lorem ipsum dolor sit amet.</p>
-          <div class="btngrp">
-              <button class="neutro "><a href="https://spandan455.github.io/varsha/html/products.html">Our Products</a></button>
-              <button class="neutro "><a href="https://spandan455.github.io/varsha/html/contact.html">Contact us</a></button>
-              <button class="neutro">Services</button>
-          </div>
-    </section>
-    <footer>
-        <p class="shade">Copyright &copy; Varshaa 2021. All rights reserved.</p>
-    </footer>
-    <script>
-        feather.replace();
 
-        var TxtRotate = function(el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
-  this.tick();
-  this.isDeleting = false;
-};
 
-TxtRotate.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
+*{
+     margin: 0;
+     padding: 0;
+     font-family: Ubuntu;
+     font-weight: lighter;
+}
 
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
+body{
+  background-color: #efeeee;
+}
+
+.nav{
+  width: 100vw;
+  height: 75px;
+  background-color: #efeeee;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+                8px 8px 15px rgba(0, 0, 0, 0.0),
+                3px 3px 5px rgba(0, 0, 0, 0.1),
+                -1px -1px 5px rgba(255, 255, 255, 1);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 3rem;
+  list-style-type: none;
+}
+
+li{
+     text-decoration : none;
+}
+  
+  li.logo{
+    margin-right: auto;
+    font-size: 1.5rem;
+    color: dimgray;
+
+    background: linear-gradient(45deg , rgb(0, 174, 255) , rgb(132, 0, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
-
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-  var that = this;
-  var rand = Math.random();
-  var delta = 300 - rand  * 200;
-
-  if (this.isDeleting) { delta /= 2; }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 10;
+    
+  
+  .nologo{
+    margin: 0 1rem;
+    padding: 10% 10%;
+    border: 2px solid rgba(255,255,255,.3);
+    box-shadow: 4px 4px 6px 0 rgba(0,0,0,.1), -4px -4px 6px rgba(255,255,255,1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.2s ease-out, transform 0.2s ease-out;
+    color: dimgray;
   }
+    
+    .nologo:hover{
+      transform: scale(1.05);
+      box-shadow: 4px 4px 10px 0 rgba(0,0,0,.1), -4px -4px 10px rgba(255,255,255,1);
+}
 
-  setTimeout(function() {
-    that.tick();
-  }, delta);
-};
+.nologo:focus,.neutroA{
+  outline: none;
+  transform: scale(0.95);
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+              8px 8px 15px rgba(0, 0, 0, 0.2),
+              inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+              inset -1px -1px 5px rgba(255, 255, 255, 1);
+  /* box-shadow: 4px 4px 10px 0 rgba(0,0,0,.1), -4px -4px 10px rgba(255,255,255,1), 4px 4px 10px 0 rgba(0,0,0,.1) inset, -4px -4px 10px rgba(255,255,255,1) inset; */
+}
 
-window.onload = function() {
-  var elements = document.getElementsByClassName('txt-rotate');
-  for (var i=0; i<elements.length; i++) {
-    var toRotate = elements[i].getAttribute('data-rotate');
-    var period = elements[i].getAttribute('data-period');
-    if (toRotate) {
-      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+.nologo:hover, .nologo:focus, .neutroA{
+  color: white;
+  -webkit-text-fill-color: white;
+  background: linear-gradient(45deg , rgb(0, 238, 255) , rgb(132, 0, 255));
+  border: none;
+}
+    
+ 
+
+    
+    
+    
+    .preview{
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
-  }
-  // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-  document.body.appendChild(css);
-};
+    
+.preview h1{
+        
+        background: linear-gradient(45deg , rgb(0, 174, 255) , rgb(132, 0, 255));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-size: 2rem;
+}
 
-var confettiSettings = { target: 'my-canvas' };
-var confetti = new ConfettiGenerator(confettiSettings);
-confetti.render();
-    </script>
-</body>
-</html>
+.shade{
+     
+    background: linear-gradient(45deg , rgb(0, 174, 255) , rgb(132, 0, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.btngrp{
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+    
+
+.neutro{
+    padding: 10px 10px;
+    margin: 0 10px;
+    background: linear-gradient(45deg , rgb(0, 174, 255) , rgb(132, 0, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    border: none;
+    border-radius: .5rem;
+    color: #444;
+    font-size: 1rem;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+                -6px -6px 10px rgba(255, 255, 255, .5),
+                6px 6px 8px rgba(255, 255, 255, .075),
+                6px 6px 10px rgba(0, 0, 0, .15);
+  }
+  .neutro:hover {
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+                -2px -2px 4px rgba(255, 255, 255, .4),
+                2px 2px 2px rgba(255, 255, 255, .05),
+                2px 2px 4px rgba(0, 0, 0, .1);
+    background: linear-gradient(45deg , rgb(0, 238, 255) , rgb(132, 0, 255));
+    -webkit-text-fill-color: white;
+    transform: scale(1.05);
+  }
+  .neutro:focus {
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+                8px 8px 15px rgba(0, 0, 0, 0.2),
+                inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+                inset -1px -1px 5px rgba(255, 255, 255, 1);
+    background: linear-gradient(45deg , rgb(0, 238, 255) , rgb(132, 0, 255));
+    -webkit-text-fill-color: white;
+  }
+
+  .p{
+      padding: 10px;
+      color: #44476a;
+  }
+
+  footer{
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+
+      width: 100%;
+      height: 50px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+a{
+  text-decoration: none;
+  color: dimgray;
+}
+
+.nologo:hover a{
+  -webkit-text-fill-color: white;
+  color: white;
+}
+
+a:hover{
+  color: white;
+}
+
+.neutroA a{
+  color: white;
+}
+
+::-webkit-scrollbar{
+  background: #efeeee;
+}
+
+::-webkit-scrollbar-thumb{
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+        8px 8px 15px rgba(0, 0, 0, 0.0),
+        inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+        inset -1px -1px 5px rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
+  
+
+  
