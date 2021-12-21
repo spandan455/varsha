@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*{
+     margin: 0;
+     padding: 0;
+     font-family: Ubuntu;
+     font-weight: lighter;
+}
+
+body{
+  background-color: #efeeee;
+}
+
+.nav{
+  width: calc(100% - 6rem);
+  height: 75px;
+  background-color: #efeeee;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+                8px 8px 15px rgba(0, 0, 0, 0.0),
+                3px 3px 5px rgba(0, 0, 0, 0.1),
+                -1px -1px 5px rgba(255, 255, 255, 1);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 3rem;
+  list-style-type: none;
+}
+  
+  li.logo{
+    margin-right: auto;
+    font-size: 1.5rem;
+    color: dimgray;
+
+    background: linear-gradient(45deg , rgb(0, 174, 255) , rgb(132, 0, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+    
+  
+  .nologo{
+    margin: 0 1rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid rgba(255,255,255,.3);
+    box-shadow: 4px 4px 6px 0 rgba(0,0,0,.1), -4px -4px 6px rgba(255,255,255,1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.2s ease-out, transform 0.2s ease-out;
+    color: dimgray;
+  }
+    
+    .nologo:hover{
+      transform: scale(1.05);
+      box-shadow: 4px 4px 10px 0 rgba(0,0,0,.1), -4px -4px 10px rgba(255,255,255,1);
+}
+
+.nologo:focus,.neutroA{
+  outline: none;
+  transform: scale(0.95);
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+              8px 8px 15px rgba(0, 0, 0, 0.2),
+              inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+              inset -1px -1px 5px rgba(255, 255, 255, 1);
+  /* box-shadow: 4px 4px 10px 0 rgba(0,0,0,.1), -4px -4px 10px rgba(255,255,255,1), 4px 4px 10px 0 rgba(0,0,0,.1) inset, -4px -4px 10px rgba(255,255,255,1) inset; */
+}
+
+.nologo:hover, .nologo:focus, .neutroA{
+  color: white;
+  -webkit-text-fill-color: white;
+  background: linear-gradient(45deg , rgb(0, 238, 255) , rgb(132, 0, 255));
+  border: none;
+}
+    
+ 
+
+    
+    
+    
+    .preview{
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+.preview h1{
+        
+        background: linear-gradient(45deg , rgb(0, 174, 255) , rgb(132, 0, 255));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-size: 2rem;
+}
+
+.shade{
+     
+    background: linear-gradient(45deg , rgb(0, 174, 255) , rgb(132, 0, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.btngrp{
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+    
+
+.neutro{
+    padding: 10px 10px;
+    margin: 0 10px;
+    background: linear-gradient(45deg , rgb(0, 174, 255) , rgb(132, 0, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    border: none;
+    border-radius: .5rem;
+    color: #444;
+    font-size: 1rem;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+                -6px -6px 10px rgba(255, 255, 255, .5),
+                6px 6px 8px rgba(255, 255, 255, .075),
+                6px 6px 10px rgba(0, 0, 0, .15);
+  }
+  .neutro:hover {
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+                -2px -2px 4px rgba(255, 255, 255, .4),
+                2px 2px 2px rgba(255, 255, 255, .05),
+                2px 2px 4px rgba(0, 0, 0, .1);
+    background: linear-gradient(45deg , rgb(0, 238, 255) , rgb(132, 0, 255));
+    -webkit-text-fill-color: white;
+    transform: scale(1.05);
+  }
+  .neutro:focus {
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+                8px 8px 15px rgba(0, 0, 0, 0.2),
+                inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+                inset -1px -1px 5px rgba(255, 255, 255, 1);
+    background: linear-gradient(45deg , rgb(0, 238, 255) , rgb(132, 0, 255));
+    -webkit-text-fill-color: white;
+  }
+
+  .p{
+      padding: 10px;
+      color: #44476a;
+  }
+
+  footer{
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+
+      width: 100%;
+      height: 50px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+a{
+  text-decoration: none;
+  color: dimgray;
+}
+
+.nologo:hover a{
+  -webkit-text-fill-color: white;
+  color: white;
+}
+
+a:hover{
+  color: white;
+}
+
+.neutroA a{
+  color: white;
+}
+
+::-webkit-scrollbar{
+  background: #efeeee;
+}
+
+::-webkit-scrollbar-thumb{
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+        8px 8px 15px rgba(0, 0, 0, 0.0),
+        inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+        inset -1px -1px 5px rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
+  
+
+  
