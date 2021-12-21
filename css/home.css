@@ -26,6 +26,10 @@ body{
   padding: 0 3rem;
   list-style-type: none;
 }
+
+li{
+     text-decoration : none;
+}
   
   li.logo{
     margin-right: auto;
