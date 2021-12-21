@@ -37,6 +37,32 @@
         <p class="shade">Copyright &copy; Varshaa 2021. All rights reserved.</p>
     </footer>
     <script>
+
+      
+
+var mq = window.matchMedia( "(max-width: 500px)" );
+
+function Media(mq){
+      if (mq.matches) {
+    document.querySelector('.logo').style.display = "none";
+    document.querySelector('.nav').style.display = "flex";
+    document.querySelector('.nav').style.justifyContent = "center";
+    document.querySelector('.btngrp').style.flexDirection = "column";
+    document.querySelectorAll('.neutro').forEach(element =>{
+      element.style.margin = "10px 0"
+    })
+
+}
+      else {
+        document.querySelector('.logo').style.display = "static";
+}
+}
+
+Media(mq);
+mq.addListener(Media)
+
+
+
         feather.replace();
 
         var TxtRotate = function(el, toRotate, period) {
@@ -97,9 +123,7 @@ window.onload = function() {
   document.body.appendChild(css);
 };
 
-var confettiSettings = { target: 'my-canvas' };
-var confetti = new ConfettiGenerator(confettiSettings);
-confetti.render();
+
     </script>
 </body>
 </html>
