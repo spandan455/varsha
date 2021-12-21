@@ -28,7 +28,7 @@ body{
 }
 
 li{
-     text-decoration : none;
+  list-style: none;
 }
   
   li.logo{
