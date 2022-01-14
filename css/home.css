@@ -69,6 +69,7 @@ body{
   -webkit-text-fill-color: white;
   background: linear-gradient(45deg , rgb(0, 238, 255) , rgb(132, 0, 255));
   border: none;
+     list-style : none;
 }
     
  
