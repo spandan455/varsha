@@ -28,6 +28,7 @@ body{
 }
   
   li.logo{
+         list-style: none;
     margin-right: auto;
     font-size: 1.5rem;
     color: dimgray;
