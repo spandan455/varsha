@@ -24,7 +24,7 @@ body{
   justify-content: flex-end;
   align-items: center;
   padding: 0 3rem;
-  list-style-type: none;
+  list-style: none;
 }
   
   li.logo{
