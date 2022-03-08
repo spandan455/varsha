@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
+@media only screen and (max-width:830px) {
+  .crdrw{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card{
+    width: 90%;
+  }
+}
+
 *{
      margin: 0;
      padding: 0;
@@ -24,10 +38,11 @@ body{
   justify-content: flex-end;
   align-items: center;
   padding: 0 3rem;
-  list-style-type: none;
+  list-style: none;
 }
   
   li.logo{
+         list-style: none;
     margin-right: auto;
     font-size: 1.5rem;
     color: dimgray;
@@ -39,6 +54,7 @@ body{
     
   
   .nologo{
+    list-style: none;
     margin: 0 1rem;
     padding: 0.5rem 1.5rem;
     border: 2px solid rgba(255,255,255,.3);
@@ -48,6 +64,8 @@ body{
     transition: color 0.2s ease-out, transform 0.2s ease-out;
     color: dimgray;
   }
+
+
     
     .nologo:hover{
       transform: scale(1.05);
@@ -69,6 +87,7 @@ body{
   -webkit-text-fill-color: white;
   background: linear-gradient(45deg , rgb(0, 238, 255) , rgb(132, 0, 255));
   border: none;
+     list-style : none;
 }
     
  
@@ -92,13 +111,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    /* flex-direction: row; */
     margin-top: 100px;
 }
 
 .card{
-    width: 30%;
-    height: 80vh;
+    /* width: 30%;
+    height: 80vh; */
 
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
                 8px 8px 15px rgba(0, 0, 0, 0.0),
@@ -113,9 +132,9 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    
     border-radius: 10px;
-}
+  }
 
 ::-webkit-scrollbar{
   background: #efeeee;
@@ -123,50 +142,51 @@ body{
 
 ::-webkit-scrollbar-thumb{
   box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
-        8px 8px 15px rgba(0, 0, 0, 0.0),
-        inset 3px 3px 5px rgba(0, 0, 0, 0.1),
-        inset -1px -1px 5px rgba(255, 255, 255, 1);
+  8px 8px 15px rgba(0, 0, 0, 0.0),
+  inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+  inset -1px -1px 5px rgba(255, 255, 255, 1);
   border-radius: 10px;
 }
 
 .inner img{
-    width: 80%;
-    border-radius: 10px;
-    z-index: -1;
+  width: 80%;
+  border-radius: 10px;
+  z-index: -1;
 }
 
 .inner p{
-    padding: 10px;
-    margin: 10px;
-
-    text-align: center;
-    text-transform: lowercase;
-    z-index: -1;
+  padding: 10px;
+  margin: 10px;
+  
+  text-align: center;
+  text-transform: lowercase;
+  z-index: -1;
 }
 
 .inner h1{
     text-transform: uppercase;
     font-size: 1.5rem;
     z-index: -1;
-}
-
-
-
-
-.shade{
-     
+    text-align: center;
+  }
+  
+  
+  
+  
+  .shade{
+    
     background: linear-gradient(45deg , rgb(0, 174, 255) , rgb(132, 0, 255));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-}
-
-.shade2{
+  }
+  
+  .shade2{
     -webkit-text-fill-color: dimgray;
     color: dimgray;
-
-}
-
-
+    
+  }
+  
+  
 .neutro{
     padding: 10px 10px;
     margin: 20px 10px;
@@ -210,12 +230,16 @@ body{
     color: dimgray;
   }
 
-  .neutroA a{
-    color: white;
-    -webkit-text-fill-color: white;
-  }
-
   .nologo:hover a{
+    -webkit-text-fill-color: white;
+    color: white;
+  }
+  
+  a:hover{
+    color: white;
+  }
+  
+  .neutroA a{
     color: white;
   }
 
@@ -249,3 +273,19 @@ body{
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.3), 4px 4px 8px 0px rgba(255, 255, 255, 0.1) inset;
     transition: all 2s;
   } */
+
+  @media only screen and (max-width : 500px) {
+    .logo{
+      display: none;
+    }
+    .nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .nologo{
+      width: 10vw;
+    }
+  }
+  
