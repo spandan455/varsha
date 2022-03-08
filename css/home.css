@@ -206,6 +206,23 @@ a:hover{
         inset -1px -1px 5px rgba(255, 255, 255, 1);
   border-radius: 10px;
 }
+
+
+@media only screen and (max-width : 500px) {
+  .logo{
+    display: none;
+  }
+  .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .nologo{
+    width: 10vw;
+  }
+}
+
   
 
   
