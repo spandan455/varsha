@@ -215,3 +215,25 @@ a{
   color: white;
 }
 
+
+@media only screen and (max-width : 830px) {
+  .container{
+    width: 90vw;
+  }
+}
+
+
+@media only screen and (max-width : 500px) {
+  .logo{
+    display: none;
+  }
+  .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .nologo{
+    width: 10vw;
+  }
+}
