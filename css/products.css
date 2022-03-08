@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
-@media only screen and (max-width:830px) {
-  .crdrw{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card{
-    width: 90%;
-  }
-}
 
 *{
      margin: 0;
@@ -65,7 +52,7 @@ body{
     color: dimgray;
   }
 
-
+  
     
     .nologo:hover{
       transform: scale(1.05);
@@ -88,42 +75,42 @@ body{
   background: linear-gradient(45deg , rgb(0, 238, 255) , rgb(132, 0, 255));
   border: none;
      list-style : none;
-}
+    }
     
  
 .crdgrp{
     position: absolute;
     top: 0;
     left: 0;
-
+    
     width: 100%;
     height: 100%;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     z-index: -1;
 
-}
+  }
 
 .crdrw{
-    display: flex;
+  display: flex;
     justify-content: center;
     align-items: center;
     /* flex-direction: row; */
     margin-top: 100px;
-}
-
-.card{
+  }
+  
+  .card{
     /* width: 30%;
     height: 80vh; */
-
+    
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
-                8px 8px 15px rgba(0, 0, 0, 0.0),
-                 3px 3px 5px rgba(0, 0, 0, 0.1),
+    8px 8px 15px rgba(0, 0, 0, 0.0),
+    3px 3px 5px rgba(0, 0, 0, 0.1),
                  -1px -1px 5px rgba(255, 255, 255, 1);
-
+                 
                  margin: 10px;
                  padding: 10px;
     
@@ -135,8 +122,8 @@ body{
     
     border-radius: 10px;
   }
-
-::-webkit-scrollbar{
+  
+  ::-webkit-scrollbar{
   background: #efeeee;
 }
 
@@ -164,10 +151,10 @@ body{
 }
 
 .inner h1{
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    z-index: -1;
-    text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  z-index: -1;
+  text-align: center;
   }
   
   
@@ -187,7 +174,7 @@ body{
   }
   
   
-.neutro{
+  .neutro{
     padding: 10px 10px;
     margin: 20px 10px;
     background: linear-gradient(45deg , rgb(0, 174, 255) , rgb(132, 0, 255));
@@ -204,8 +191,8 @@ body{
     cursor: pointer;
     transition: .2s ease-in-out;
     box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
-                -6px -6px 10px rgba(255, 255, 255, .5),
-                6px 6px 8px rgba(255, 255, 255, .075),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
                 6px 6px 10px rgba(0, 0, 0, .15);
   }
   .neutro:hover {
@@ -222,14 +209,14 @@ body{
                 8px 8px 15px rgba(0, 0, 0, 0.2),
                 inset 3px 3px 5px rgba(0, 0, 0, 0.1),
                 inset -1px -1px 5px rgba(255, 255, 255, 1);
-    background: linear-gradient(45deg , rgb(0, 238, 255) , rgb(132, 0, 255));
-    -webkit-text-fill-color: white;
+                background: linear-gradient(45deg , rgb(0, 238, 255) , rgb(132, 0, 255));
+                -webkit-text-fill-color: white;
   }
-
+  
   a{
     color: dimgray;
   }
-
+  
   .nologo:hover a{
     -webkit-text-fill-color: white;
     color: white;
@@ -246,20 +233,20 @@ body{
   .inner{
     width: 100%;
     height: 100%;
-
+    
     padding: 10px;
     border-radius: 10px;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    
     -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     background-color: rgba(255, 255, 255, 0.1);
     transition: all 2s;
-
+    
   }
 
   /* .box {
@@ -273,7 +260,7 @@ body{
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.3), 4px 4px 8px 0px rgba(255, 255, 255, 0.1) inset;
     transition: all 2s;
   } */
-
+  
   @media only screen and (max-width : 500px) {
     .logo{
       display: none;
@@ -289,3 +276,16 @@ body{
     }
   }
   
+  @media only screen and (max-width:830px) {
+    .crdrw{
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .card{
+      width: 90%;
+    }
+  }
